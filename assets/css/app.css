@@ -1,0 +1,323 @@
+/* Voice Resonance App Styles */
+
+/* Basic container styling */
+.vrp-app-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-width: 100%; /* Adjust as needed */
+    margin: 0 auto;  /* Center the container */
+    box-sizing: border-box;
+}
+
+/* Ensure the main app container takes available space */
+.vr-app {
+    width: 100%;
+}
+
+/* Basic styling for elements used in main.js */
+.vr-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.vr-logo h1 {
+    margin: 0;
+    font-size:
+    1.5em;
+color: #333;
+}
+.vr-plan-badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.vr-plan-badge.free {
+    background-color: #e0e0e0;
+    color: #666;
+}
+
+.vr-plan-badge.pro {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.vr-login-btn, .vr-btn {
+    padding: 8px 16px;
+    background-color: #0073aa; /* WordPress blue */
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.vr-btn:hover {
+    background-color: #005a87;
+}
+
+.vr-btn-primary {
+    background-color: #2271b1; /* Slightly different WordPress blue */
+}
+
+.vr-btn-upgrade {
+    background-color: #4CAF50; /* Green for upgrade */
+}
+
+.vr-btn-upgrade:hover {
+    background-color: #45a049;
+}
+
+.vr-recording-interface {
+    text-align: center;
+}
+
+.vr-audio-controls {
+    margin-bottom: 20px;
+}
+
+.vr-record-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.vr-record-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.vr-record-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.vr-record-btn.recording {
+    border-color: #f44336; /* Red when recording */
+    background-color: #ffebee;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(244, 67, 54, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(244, 67, 54, 0); }
+}
+
+.vr-status {
+    font-weight: bold;
+    color: #555;
+}
+
+.vr-session-info {
+    margin-bottom: 20px;
+}
+
+.vr-vri-display {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.vr-vri-score, .vr-vri-confidence {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    min-width: 120px;
+}
+
+.vri-score-placeholder, .vri-confidence-placeholder {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #888;
+}
+
+.vr-transcript-section, .vr-calibration-section, .vr-upgrade-prompt, .vr-login-prompt {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: white;
+    text-align: left;
+}
+
+.vr-transcript-text {
+    min-height: 50px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    white-space: pre-wrap; /* Preserve line breaks */
+}
+
+.vr-calibration-instructions {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Notifications */
+.vr-notifications {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+}
+
+.vr-notification {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.3s, fadeOut 0.3s 4.7s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1; transform: translateY(0);}
+    to {opacity: 0; transform: translateY(-20px);}
+}
+
+.vr-notification-info { background-color: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+.vr-notification-success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.vr-notification-error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+
+.vr-notification-close {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 15px;
+    line-height: 1;
+}
+
+/* Modals */
+.vr-modal {
+    position: fixed;
+    z-index: 10001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vr-modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.vr-modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vr-modal-header h2 {
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.vr-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.vr-modal-body {
+    padding: 20px;
+}
+
+.vr-pricing-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.vr-pricing-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.vr-pricing-card h3 {
+    margin-top: 0;
+}
+
+.vr-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.vr-pricing-card ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.vr-pricing-card ul li {
+    margin-bottom: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .vr-pricing-options {
+        flex-direction: column;
+    }
+    .vr-pricing-card {
+        width: 100%;
+    }
+    .vr-vri-display {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}

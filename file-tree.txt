@@ -1,0 +1,78 @@
+voice-resonance/
+├── voice-resonance.php
+├── readme.txt
+├── uninstall.php
+├── composer.json
+├── package.json
+├── webpack.config.js
+│
+├── includes/
+│   ├── class-autoloader.php
+│   ├── class-plugin.php
+│   ├── class-activator.php
+│   ├── class-deactivator.php
+│   │
+│   ├── admin/
+│   │   ├── class-admin.php
+│   │   ├── class-settings.php
+│   │   └── partials/
+│   │       ├── settings-display.php
+│   │       ├── dashboard-display.php
+│   │       └── users-display.php
+│   │
+│   ├── api/
+│   │   ├── class-controller.php          # <--- This is the file I updated (was incorrectly referred to as class-api-controller.php)
+│   │   ├── class-sessions.php
+│   │   ├── class-segments.php
+│   │   └── class-stripe.php
+│   │
+│   ├── database/
+│   │   ├── class-dataase-manager.php             # <--- Confirmed, this is the correct name (was class-manager.php, matching the rename you mentioned)
+│   │   ├── class-migrations.php
+│   │   └── schemas/
+│   │       └── initial-schema.sql
+│   │
+│   ├── services/
+│   │   ├── class-stripe.php
+│   │   ├── class-entitlements.php
+│   │   ├── class-audio.php
+│   │   ├── class-export.php
+│   │   └── class-share.php
+│   │
+│   └── utilities/
+│       ├── class-logger.php
+│       ├── class-validator.php
+│       └── class-security.php
+│
+├── assets/
+│   ├── css/
+│   │   ├── admin.css
+│   │   └── app.css
+│   ├── js/
+│   │   ├── src/
+│   │   │   ├── main.js
+│   │   │   ├── components/
+│   │   │   ├── audio/
+│   │   │   │   ├── processor.js
+│   │   │   │   ├── worklet.js
+│   │   │   │   └── worker.js
+│   │   │   └── utils/
+│   │   ├── dist/
+│   │   │   ├── app.min.js
+│   │   │   └── vendor.min.js
+│   │   └── admin.js
+│   ├── images/
+│   │   ├── logo.svg
+│   │   └── icons/
+│   └── manifest.json
+│
+├── templates/
+│   ├── app-page.php
+│   └── shortcode.php
+│
+├── languages/
+│   ├── voice-resonance.pot
+│   └── voice-resonance-en_US.po
+│
+└── vendor/
+    └── autoload.php

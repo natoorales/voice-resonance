@@ -1,0 +1,19 @@
+{
+    "name": "voice-resonance/wordpress-plugin",
+    "description": "Voice Resonance WordPress Plugin",
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=7.4",
+        "stripe/stripe-php": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "VoiceResonance\\": "includes/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}

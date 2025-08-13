@@ -1,0 +1,1 @@
+console.log('Voice Resonance Admin JS Placeholder');
