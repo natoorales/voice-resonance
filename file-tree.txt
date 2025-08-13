@@ -27,7 +27,7 @@ voice-resonance/
 │   │   └── class-stripe.php
 │   │
 │   ├── database/
-│   │   ├── class-dataase-manager.php             # <--- Confirmed, this is the correct name (was class-manager.php, matching the rename you mentioned)
+│   │   ├── class-database-manager.php             # <--- Confirmed, this is the correct name (was class-manager.php, matching the rename you mentioned)
 │   │   ├── class-migrations.php
 │   │   └── schemas/
 │   │       └── initial-schema.sql
